@@ -22,15 +22,11 @@ $("#menu a").each(function(){
 	//append option to select
 	$select.append($option);
 });
-//Create button to click to go to select's location
-var $button = $("<button>Go</button>");
-$("#menu").append($button);
-//Bind click to button
-$button.click(function(){
+
+//Bind change lister to select to button
+$select.change(function(){
 	//go to select's location
 	window.location = $select.val();
-		//go to select's location
 });
-/** Start Coding Here **/
 
 
