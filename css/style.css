@@ -63,4 +63,23 @@ p {
 	text-align: center;
 	color: #777;
 }
+
 /** Start Coding Here **/
+
+
+/**
+Modify Css to hide links on small screen and show button and selectt
+Also hides select and button on larger width and show's links
+**/
+
+@media (min-width: 320px) and (max-width: 568px) {
+	#menu ul {
+		display:none;
+	}
+}
+
+@media (min-width: 560px) {
+	#menu select, #menu button {
+		display:none;
+	}
+}

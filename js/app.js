@@ -11,6 +11,10 @@ $("#menu a").each(function(){
 		//Create an option
 	var $option = $("<option></option>");
 
+	//Deal with selected options depending on current page
+	if($anchor.parent().hasClass("selected")) {
+		$option.prop("selected", true);
+	}
 	//option's value is the href
 	$option.val($anchor.attr("href"));
 	//option's text is the text of links
@@ -18,13 +22,15 @@ $("#menu a").each(function(){
 	//append option to select
 	$select.append($option);
 });
-	//Create an option
-	//option's value is the href
-	//option's text is the text of links
-	//append option to select
 //Create button to click to go to select's location
+var $button = $("<button>Go</button>");
+$("#menu").append($button);
 //Bind click to button
+$button.click(function(){
 	//go to select's location
-// Modify Css to hide links on small screen and show button and selectt
-	//Also hides select and button on larger width and show's links
-//Deal with selected options depending on current page
+	window.location = $select.val();
+		//go to select's location
+});
+/** Start Coding Here **/
+
+
